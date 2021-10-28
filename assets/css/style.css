@@ -1,0 +1,71 @@
+body, html {
+    font-family: 'Lato', sans-serif;
+}
+
+:root {
+    --white: #ffffff;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --light: #f8f9fa;
+    --danger: #dc3545;
+}
+
+nav {
+    background-color: var(--orange);
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.portal {
+    font-size: 25px;
+    color: var(--white);
+}
+
+.dropdown-menu {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+.dropdown-item {
+    color: var(--orange);
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: var(--white);
+    background-color: var(--orange);
+    transition: .5s ease all;
+}
+
+.dropdown-menu {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s ease all;
+}
+
+.dropdown-menu.show {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: .5s ease all;
+}
+
+.perfil{
+    border-radius: 50%;
+}
+
+.user span{
+    color: var(--white);
+}
+
+/* div .form-row{
+} */
