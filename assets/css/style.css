@@ -85,6 +85,7 @@ a {
 }
 
 input {
+    outline: none;
     margin: 10px;
     padding: 5px 5px 0px 5px;
     background-color: var(--light);
@@ -92,15 +93,12 @@ input {
     border-bottom: 1.7px solid var(--gray);
 }
 
-input:focus {
-    color: var(--orange);
-}
-
 input::placeholder{
     color: var(--gray-dark);
 }
 
 .container select {
+    outline: none;
     background-color: var(--light);
     border: none;
     border-bottom: 1.7px solid var(--gray);
