@@ -59,13 +59,53 @@ a {
     transition: .5s ease all;
 }
 
-.perfil{
+.perfil {
     border-radius: 50%;
 }
 
-.user span{
+.user span {
     color: var(--white);
 }
 
-/* div .form-row{
-} */
+.container {
+    width: 100%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border-radius: 5px;
+    background-color: var(--light);
+    padding: 5vh;
+}
+
+.container h5 {
+    margin-left: 10px;
+    margin-bottom: 2vh;
+    text-align: start;
+    font-size: 18px;
+    color: var(--orange);
+}
+
+input {
+    margin: 10px;
+    padding: 5px 5px 0px 5px;
+    background-color: var(--light);
+    border: none;
+    border-bottom: 1.7px solid var(--gray);
+}
+
+input:focus {
+    color: var(--orange);
+}
+
+input::placeholder{
+    color: var(--gray-dark);
+}
+
+.container select {
+    background-color: var(--light);
+    border: none;
+    border-bottom: 1.7px solid var(--gray);
+}
+
+.container label{
+    color: var(--gray-dark);
+}

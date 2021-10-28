@@ -58,65 +58,48 @@
     <!-- Menu -->
 
     <!-- Localização da Propriedade -->
-<div class= "form">
-    <form class="needs-validation" novalidate>
-        <div class="form-row">
-          <div class="col-md-4 mb-3">
-            <label for="validationTooltip01">Nome</label>
-            <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
-            <div class="valid-tooltip">
-              Looks good!
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationTooltip02">Last name</label>
-            <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
-            <div class="valid-tooltip">
-              Looks good!
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationTooltipUsername">Username</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-              </div>
-              <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
-              <div class="invalid-tooltip">
-                Please choose a unique and valid username.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <label for="validationTooltip03">City</label>
-            <input type="text" class="form-control" id="validationTooltip03" required>
-            <div class="invalid-tooltip">
-              Please provide a valid city.
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationTooltip04">State</label>
-            <select class="custom-select" id="validationTooltip04" required>
-              <option selected disabled value="">Choose...</option>
-              <option>...</option>
+
+    <div class="container">
+        <h5>Localização da Propriedade</h5>
+        <form action="#" method="post">
+            <input type="text" placeholder="Nome" required>
+            <input type="text" placeholder="Endereço" required>
+            <input type="text" placeholder="Bairro" required>
+            <input type="text" placeholder="CEP" inputmode="numeric" pattern= "[0-9]{5}-[0-9]{3}" required>
+            <input type="number" inputmode="numeric" placeholder="Número" required>
+            <input type="text" placeholder="Complemento" required>
+            <input type="text" placeholder="Cidade" required>
+            <label for="uf">UF:</label>
+            <select name="uf" id="uf">
+                    <option></option>
+                    <option value="ro">RO</option>
+                    <option value="ac">AC</option>
+                    <option value="am">AM</option>
+                    <option value="rr">RR</option>
+                    <option value="pa">PA</option>
+                    <option value="to">TO</option>
+                    <option value="ma">MA</option>
+                    <option value="pi">PI</option>
+                    <option value="ce">CE</option>
+                    <option value="rn">RN</option>
+                    <option value="pb">PB</option>
+                    <option value="pe">PE</option>
+                    <option value="al">AL</option>
+                    <option value="se">SE</option>
+                    <option value="ba">BA</option>
+                    <option value="mg">MG</option>
+                    <option value="es">ES</option>
+                    <option value="rj">RJ</option>
+                    <option value="pr">PR</option>
+                    <option value="sc">SC</option>
+                    <option value="rs">RS</option>
+                    <option value="ms">MS</option>
+                    <option value="mt">MT</option>
+                    <option value="go">GO</option>
+                    <option value="df">DF</option>
             </select>
-            <div class="invalid-tooltip">
-              Please select a valid state.
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationTooltip05">Zip</label>
-            <input type="text" class="form-control" id="validationTooltip05" required>
-            <div class="invalid-tooltip">
-              Please provide a valid zip.
-            </div>
-          </div>
-        </div>
-        <button class="btn btn-primary" type="submit">Submit form</button>
-      </form>
-</div>
+        </form>
+    </div>
 
     <!-- Localização da Propriedade -->
 
