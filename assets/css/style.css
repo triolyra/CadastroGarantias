@@ -12,6 +12,7 @@ body, html {
     --gray-dark: #343a40;
     --light: #f8f9fa;
     --danger: #dc3545;
+    --safe: #4cd038;
 }
 
 nav {
@@ -92,8 +93,16 @@ input {
     border-bottom: 1.7px solid var(--gray);
 }
 
-input::placeholder{
+input::placeholder {
     color: var(--gray-dark);
+}
+
+input:focus:required:invalid{
+    border-bottom: 1.7px solid var(--danger);
+}
+
+input:focus:required:valid{
+    border-bottom: 1.7px solid var(--safe);
 }
 
 .container select {
@@ -102,41 +111,41 @@ input::placeholder{
     border-bottom: 1.7px solid var(--gray);
 }
 
-.container label{
+.container label {
     color: var(--gray-dark);
 }
 
-.buttons{
+.buttons {
     text-align: end;
 }
 
-.btn{
+.btn {
     margin: 0px 0px 50px 5px;
     transition-duration: 0.4s;
 }
 
-.btn:focus{
+.btn:focus {
     border-color: none;
     box-shadow: none;
 }
 
-.btn-save{
+.btn-save {
     background-color: var(--orange);
     color: var(--white);
 }
 
-.btn-save:hover{
-    background-color:#df6807;
+.btn-save:hover {
+    background-color: #df6807;
     color: var(--white);
 }
 
-.btn-return{
+.btn-return {
     background-color: var(--gray);
     color: var(--white);
 }
 
-.btn-return:hover{
-    background-color:#343a40;
+.btn-return:hover {
+    background-color: #343a40;
     color: var(--white);
 }
 

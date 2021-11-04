@@ -100,32 +100,42 @@
 
     <!-- Tabela/Dados-->
 
-        <!-- Operação -->
+    <!-- Operação -->
 
-        <div class="container">
-            <div class="card">
-                <div class="card-body">
-                    <h5>Operação</h5>
-                    <form action="#" method="post">
-                        <input type="number" inputmode="numeric" placeholder="Produto" required>
-                        <input type="number" inputmode="numeric" placeholder="Agência" required>
-                        <input type="number" inputmode="numeric" placeholder="Conta" required>
-                        <input type="number" inputmode="numeric" placeholder="Dac" required>
-                        <input type="number" inputmode="numeric" placeholder="CPF/CNPJ do Tomador" required>
-                        <label class="ms-2" for="date">Data de Abertura:
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5>Operação</h5>
+                <form action="#" method="post">
+                    <input id="produto" type="text" placeholder="Produto" minlength="5" maxlength="5" required
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    <input id="agencia" type="text" placeholder="Agência" minlength="4" maxlength="5" required
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" title="Insira uma agência válida">
+                    <input id="conta" type="text" placeholder="Conta" minlength="5" maxlength="5" required
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" title="Insira uma conta válida">
+                    <input id="dac" type="text" placeholder="Dac" minlength="1" maxlength="1" required
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" title= "Insira um dígito da conta válido">
+                    <input id="cpfcnpj" type="text"
+                        pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
+                        title="Digite um CPF no formato: XXX.XXX.XXX-XX ou CNPJ no formato: XX.XXX.XXX/0001-XX" maxlength="18" 
+                        placeholder="CPF/CNPJ do Tomador" required>
+                    <label class="ms-2" for="date">Data de Abertura:
                             <input type="date" required>
                         </label>
                         <label class="ms-2" for="date">Data de Vencimento:
                             <input type="date" required>
                             <input type="number" inputmode="numeric" placeholder="Valor" disabled>
                         </label>
-                    </form>
-                </div>
+                    <div class="container buttons">
+                        <button class="mb-0 btn btn-save">Prosseguir</button>
+                    </div>
+                </form>
             </div>
         </div>
-    
-    
-        <!-- Operação -->
+    </div>
+
+
+    <!-- Operação -->
 
     <!-- Dados do Penhor Agrícola -->
 
@@ -267,7 +277,8 @@
                     </select>
                     <input type="text" placeholder="Valor de avaliação" required>
                     <input type="date" required>
-                    <label for="avaliação estimavel">O bem não possui avaliação ou não é possivel estimar o seu valor?</label>
+                    <label for="avaliação estimavel">O bem não possui avaliação ou não é possivel estimar o seu
+                        valor?</label>
                     <input type="radio" name="coleita realizada" value="sim">Sim
                     <input type="radio" name="coleita realizada" value="nao">Não
                     </select>
