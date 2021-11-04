@@ -100,9 +100,9 @@
 
     <!-- Tabela/Dados-->
 
-     <!-- Dados do Penhor Agrícola -->
+    <!-- Dados do Penhor Agrícola -->
 
-     <div class="container">
+    <div class="container">
         <div class="card">
             <div class="card-body">
                 <h5 class="ms-0">Dados do Penhor Agrícola</h5>
@@ -113,7 +113,7 @@
                         <option value="algodão">Algodão</option>
                         <option value="arroz">Arroz</option>
                         <option value="cafe">café</option>
-                        <option value="cana de açucar">Cana de açucar</option>
+                        <option value="cana de açucar">Cana de açúcar</option>
                         <option value="feijão">Feijão</option>
                         <option value="laranja">Laranja</option>
                         <option value="maçã">Maçã</option>
@@ -214,6 +214,71 @@
     </div>
 
     <!-- Localização da Propriedade -->
+
+    <!-- Avaliação de bem -->
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5>Avaliação de bem</h5>
+                <form action="#" method="post">
+                    <label for="tipo de moeda">Tipo de moeda:</label>
+                    <select name="tipo de moeda" id="tipo de moeda">
+                        <option></option>
+                        Dólar Americano
+                        <option value="ro">Real</option>
+                        <option value="ac">Dólar</option>
+                        <option value="am">Euro</option>
+                        <option value="rr">Libra</option>
+                        <option value="pa">Iene</option>
+                        <option value="to">Franco Suíço</option>
+                        <option value="ma">Renminbi (Yuan)</option>
+                        <option value="pi">Peso Argentino</option>
+                        <option value="ce">Lira Turca</option>
+                        <option value="rn">Bens</option>
+                        <option value="pb">Outros</option>
+                    </select>
+                    <input type="text" placeholder="Valor de avaliação" required>
+                    <input type="date" required>
+                    <label for="avaliação estimavel">O bem não possui avaliação ou não é possivel estimar o seu valor?</label>
+                    <input type="radio" name="coleita realizada" value="sim">Sim
+                    <input type="radio" name="coleita realizada" value="nao">Não
+                    </select>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Avaliação de bem -->
+
+    <!-- Dados do Seguro -->
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5>Dados do Seguro</h5>
+                <form action="#" method="post">
+                    <input type="number" inputmode="numeric" placeholder="Número Apólice:" required>
+                    <input type="number" inputmode="numeric" placeholder="CNPJ Seguradora:" required>
+                    <label class= "ms-2" for="date">Data Início Val.:
+                        <input type="date" required>
+                    </label>
+                    <label class= "ms-2" for="date">Data Fim Val.:
+                        <input type="date" required>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dados do Seguro -->
+
+    <!-- Botões -->
+
+    <div class="container buttons">
+        <button type="button" class="btn btn-return">Retornar</button>
+        <button type="button" class="btn btn-save">Salvar</button>
+    </div>
 
     <!-- Botões -->
 

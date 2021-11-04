@@ -84,6 +84,7 @@ a {
 }
 
 input {
+    width: 30%;
     outline: none;
     margin: 10px;
     padding: 5px 5px 0px 5px;
@@ -103,4 +104,66 @@ input::placeholder{
 
 .container label{
     color: var(--gray-dark);
+}
+
+.buttons{
+    text-align: end;
+}
+
+.btn{
+    margin: 0px 0px 50px 5px;
+    transition-duration: 0.4s;
+}
+
+.btn:focus{
+    border-color: none;
+    box-shadow: none;
+}
+
+.btn-save{
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.btn-save:hover{
+    background-color:#df6807;
+    color: var(--white);
+}
+
+.btn-return{
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+.btn-return:hover{
+    background-color:#343a40;
+    color: var(--white);
+}
+
+input[type='radio']:after {
+    width: 18px;
+    height: 18px;
+    border-radius: 16px;
+    top: -1px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 3px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 18px;
+    height: 18px;
+    border-radius: 15px;
+    top: -1px;
+    left: -1px;
+    position: relative;
+    background-color: #fd7e14;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 3px solid white;
 }
