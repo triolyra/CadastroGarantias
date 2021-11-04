@@ -136,6 +136,15 @@ input[type='radio']:checked:after {
 
 
 
+.buttons{
+    text-align: end;
+}
+
+.btn{
+    margin: 0px 0px 50px 5px;
+    transition-duration: 0.4s;
+}
+
 .btn:focus{
     border-color: none;
     box-shadow: none;

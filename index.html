@@ -57,6 +57,35 @@
 
     <!-- Menu -->
 
+    <!-- Operação-->
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5>Operação</h5>
+                <form action="#" method="post">
+                    <input type="text" id="produto" oninput="capturar();" inputmode="numeric" placeholder="Produto*"
+                        required>
+                    <input type="text" id="contrato" inputmode="numeric" placeholder="Contrato*" required>
+                    <input type="text" id="agencia" inputmode="numeric" placeholder="Agência*" required>
+                    <input type="text" id="conta" inputmode="numeric" placeholder="Conta*" required>
+                    <input type="text" id="cnpj/cpf" inputmode="numeric" placeholder="CPF/CNPJ" required>
+                    <label class="ms-2" for="date">Data Abertura:
+                        <input type="date" id="dataAbertura" required>
+                    </label>
+                    <label class="ms-2" id="dataVenc" for="date">Data De Venc.:
+                        <input type="date" required>
+                    </label>
+                    <label class="ms-2" for="date">Valor
+                        <input type="search" id="valor*" required>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Operação-->
+
     <!-- inclusão Do Penhor -->
     <div>
         <div class="container">
@@ -66,226 +95,214 @@
                         <h5> Inclusão do Penhor Agrícola</h5>
                     </div>
 
-                    <!-- inclusão Do Penhor -->
-
                     <!-- Tabela/Dados-->
 
-                    <table class="table mt-3">
-                        <tbody>
-                            <div class="row d-flex justify-content-lg-start">
-                                <div class="col-3">
-                                    <tr>
-                                        <th scope="row">Produto</th>
-                                        <td>12345678889</td>
-                                        <th scope="row">Cliente</th>
-                                        <td>None</td>
-                                    </tr>
-                                </div>
-                                <div class="col-3 ">
-                                    <tr>
-                                        <th scope="row">Contrato</th>
-                                        <td>12345</td>
-                                        <th scope="row">CNPJ</th>
-                                        <td>23456789090</td>
-                                    </tr>
-                                </div>
-                            </div>
-                        </tbody>
-                    </table>
+                    <div class="container d-flex justify-content-lg-start">
 
+                        <div class="col-3 me-xxl-5">
+                            <label for="nome">Produto:</label>
+                            <h5 id="prodValor"> </h5>
+                            <label for="nome">Cliente:</label>
+                            <input texto="text" name="nome" id="nome" disabled>
+
+                        </div>
+
+                        <div class="col-3 mx-5">
+                            <label for="nome">Contrato:</label>
+                            <input texto="text" name="nome" id="nome" disabled>
+
+                            <label for="nome">CPF/CNPJ:</label>
+                            <input texto="text" name="nome" id="nome" disabled>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Tabela/Dados-->
+        <!-- Tabela/Dados-->
 
-    <!-- Dados do Penhor Agrícola -->
+        <!-- Dados do Penhor Agrícola -->
 
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="ms-0">Dados do Penhor Agrícola</h5>
-                <form action="#" method="post">
-                    <label for="Tipo Agrícola">Tipo Agrícola:</label>
-                    <select name="Tipo Agrícola" id="Tipo Agrícola">
-                        <option></option>
-                        <option value="algodão">Algodão</option>
-                        <option value="arroz">Arroz</option>
-                        <option value="cafe">café</option>
-                        <option value="cana de açucar">Cana de açúcar</option>
-                        <option value="feijão">Feijão</option>
-                        <option value="laranja">Laranja</option>
-                        <option value="maçã">Maçã</option>
-                        <option value="milho">Milho</option>
-                        <option value="soja">Soja</option>
-                        <option value="trigo">Trigo</option>
-                        <option value="uva">Uva</option>
-                        <option value="figo">Figo</option>
-                        <option value="outros">Outros</option>
-                        <input type="text" placeholder="Safra" required>
-                        <input type="text" placeholder="Quantidade" required>
-                        <label for="Colheita realizada">Colheita realizada:</label>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="ms-0">Dados do Penhor Agrícola</h5>
+                    <form action="#" method="post">
+                        <label for="Tipo Agrícola">Tipo Agrícola:</label>
+                        <select name="Tipo Agrícola" id="Tipo Agrícola">
+                            <option></option>
+                            <option value="algodão">Algodão</option>
+                            <option value="arroz">Arroz</option>
+                            <option value="cafe">café</option>
+                            <option value="cana de açucar">Cana de açúcar</option>
+                            <option value="feijão">Feijão</option>
+                            <option value="laranja">Laranja</option>
+                            <option value="maçã">Maçã</option>
+                            <option value="milho">Milho</option>
+                            <option value="soja">Soja</option>
+                            <option value="trigo">Trigo</option>
+                            <option value="uva">Uva</option>
+                            <option value="figo">Figo</option>
+                            <option value="outros">Outros</option>
+                            <input type="text" placeholder="Safra" required>
+                            <input type="text" placeholder="Quantidade" required>
+                            <label for="Colheita realizada">Colheita realizada:</label>
+                            <input type="radio" name="coleita realizada" value="sim">Sim
+                            <input type="radio" name="coleita realizada" value="nao">Não
+                            <label for="Unidade de medida">Unidade de medida:</label>
+                            <select name="Unidade de medida" id="Unidade de medida">
+                                <option></option>
+                                <option value="unidade">Unidade</option>
+                                <option value="dezena">Dezena</option>
+                                <option value="cento">Cento</option>
+                                <option value="milheiro">Milheiro</option>
+                                <option value="metro">Metro</option>
+                                <option value="metro quadrado">Metro quadrado</option>
+                                <option value="metro cubico">Metro cúbico</option>
+                                <option value="litro">Litro</option>
+                                <option value="galão">Galão</option>
+                                <option value="dúzia">Dúzia</option>
+                                <option value="meia dúzia">Meia dúzia</option>
+                                <option value="kilo">Kilo</option>
+                                <option value="tonelada bruta">Tonelada bruta</option>
+                                <option value="tonelada">Tonelada</option>
+                                <option value="caixa">Caixa</option>
+                                <option value="conjunto">Conjunto</option>
+                                <option value="bloco">Bloco</option>
+                                <option value="grama">Grama</option>
+                                <option value="folha">Folha</option>
+                                <option value="frasco">Frasco</option>
+                                <option value="kilometro">Kilometro</option>
+                                <option value="viagem/percurso">Viagem/Percurso</option>
+                                <option value="rolo">Rolo</option>
+                                <option value="copia">Copia</option>
+                                <option value="pacote">Pacote</option>
+                                <option value="fardo">Fardo</option>
+                            </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dados do Penhor Agrícola -->
+
+        <!-- Localização da Propriedade -->
+
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Localização da Propriedade</h5>
+                    <form action="#" method="post">
+                        <input type="text" placeholder="Nome" required>
+                        <input type="text" placeholder="Endereço" required>
+                        <input type="text" placeholder="Bairro" required>
+                        <input type="text" placeholder="CEP" inputmode="numeric" pattern="[0-9]{5}-[0-9]{3}" required>
+                        <input type="number" inputmode="numeric" placeholder="Número" required>
+                        <input type="text" placeholder="Complemento" required>
+                        <input type="text" placeholder="Cidade" required>
+                        <label for="uf">UF:</label>
+                        <select name="uf" id="uf">
+                            <option></option>
+                            <option value="ro">RO</option>
+                            <option value="ac">AC</option>
+                            <option value="am">AM</option>
+                            <option value="rr">RR</option>
+                            <option value="pa">PA</option>
+                            <option value="to">TO</option>
+                            <option value="ma">MA</option>
+                            <option value="pi">PI</option>
+                            <option value="ce">CE</option>
+                            <option value="rn">RN</option>
+                            <option value="pb">PB</option>
+                            <option value="pe">PE</option>
+                            <option value="al">AL</option>
+                            <option value="se">SE</option>
+                            <option value="ba">BA</option>
+                            <option value="mg">MG</option>
+                            <option value="es">ES</option>
+                            <option value="rj">RJ</option>
+                            <option value="pr">PR</option>
+                            <option value="sc">SC</option>
+                            <option value="rs">RS</option>
+                            <option value="ms">MS</option>
+                            <option value="mt">MT</option>
+                            <option value="go">GO</option>
+                            <option value="df">DF</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Localização da Propriedade -->
+
+
+        <!-- Avaliação de bem -->
+
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Avaliação de bem</h5>
+                    <form action="#" method="post">
+                        <label for="tipo de moeda">Tipo de moeda:</label>
+                        <select name="tipo de moeda" id="tipo de moeda">
+                            <option></option>
+                            <option value="ro">Real</option>
+                            <option value="ac">Dólar</option>
+                            <option value="am">Euro</option>
+                            <option value="rr">Libra</option>
+                            <option value="pb">Outros</option>
+                        </select>
+                        <input type="text" placeholder="Valor de avaliação" required>
+                        <input type="date" required>
+                        <label for="avaliação estimavel">O bem não possui avaliação ou não é possível estimar o seu
+                            valor?</label>
                         <input type="radio" name="coleita realizada" value="sim">Sim
                         <input type="radio" name="coleita realizada" value="nao">Não
-                        <label for="Unidade de medida">Unidade de medida:</label>
-                        <select name="Unidade de medida" id="Unidade de medida">
-                            <option></option>
-                            <option value="unidade">Unidade</option>
-                            <option value="dezena">Dezena</option>
-                            <option value="cento">Cento</option>
-                            <option value="milheiro">Milheiro</option>
-                            <option value="metro">Metro</option>
-                            <option value="metro quadrado">Metro quadrado</option>
-                            <option value="metro cubico">Metro cúbico</option>
-                            <option value="litro">Litro</option>
-                            <option value="galão">Galão</option>
-                            <option value="dúzia">Dúzia</option>
-                            <option value="meia dúzia">Meia dúzia</option>
-                            <option value="kilo">Kilo</option>
-                            <option value="tonelada bruta">Tonelada bruta</option>
-                            <option value="tonelada">Tonelada</option>
-                            <option value="caixa">Caixa</option>
-                            <option value="conjunto">Conjunto</option>
-                            <option value="bloco">Bloco</option>
-                            <option value="grama">Grama</option>
-                            <option value="folha">Folha</option>
-                            <option value="frasco">Frasco</option>
-                            <option value="kilometro">Kilometro</option>
-                            <option value="viagem/percurso">Viagem/Percurso</option>
-                            <option value="rolo">Rolo</option>
-                            <option value="copia">Copia</option>
-                            <option value="pacote">Pacote</option>
-                            <option value="fardo">Fardo</option>
                         </select>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Dados do Penhor Agrícola -->
+        <!-- Avaliação de bem -->
 
-    <!-- Localização da Propriedade -->
+        <!-- Dados do Seguro -->
 
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h5>Localização da Propriedade</h5>
-                <form action="#" method="post">
-                    <input type="text" placeholder="Nome" required>
-                    <input type="text" placeholder="Endereço" required>
-                    <input type="text" placeholder="Bairro" required>
-                    <input type="text" placeholder="CEP" inputmode="numeric" pattern="[0-9]{5}-[0-9]{3}" required>
-                    <input type="number" inputmode="numeric" placeholder="Número" required>
-                    <input type="text" placeholder="Complemento" required>
-                    <input type="text" placeholder="Cidade" required>
-                    <label for="uf">UF:</label>
-                    <select name="uf" id="uf">
-                        <option></option>
-                        <option value="ro">RO</option>
-                        <option value="ac">AC</option>
-                        <option value="am">AM</option>
-                        <option value="rr">RR</option>
-                        <option value="pa">PA</option>
-                        <option value="to">TO</option>
-                        <option value="ma">MA</option>
-                        <option value="pi">PI</option>
-                        <option value="ce">CE</option>
-                        <option value="rn">RN</option>
-                        <option value="pb">PB</option>
-                        <option value="pe">PE</option>
-                        <option value="al">AL</option>
-                        <option value="se">SE</option>
-                        <option value="ba">BA</option>
-                        <option value="mg">MG</option>
-                        <option value="es">ES</option>
-                        <option value="rj">RJ</option>
-                        <option value="pr">PR</option>
-                        <option value="sc">SC</option>
-                        <option value="rs">RS</option>
-                        <option value="ms">MS</option>
-                        <option value="mt">MT</option>
-                        <option value="go">GO</option>
-                        <option value="df">DF</option>
-                    </select>
-                </form>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h5>Dados do Seguro</h5>
+                    <form action="#" method="post">
+                        <input type="text" inputmode="numeric" placeholder="Número Apólice:" required>
+                        <input type="text" inputmode="numeric" placeholder="CNPJ Seguradora:" required>
+                        <label class="ms-2" for="date">Data Início Val.:
+                            <input type="date" required>
+                        </label>
+                        <label class="ms-2" for="date">Data Fim Val.:
+                            <input type="date" required>
+                        </label>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Localização da Propriedade -->
+        <!-- Dados do Seguro -->
 
+        <!-- Botões -->
 
-    <!-- Avaliação de bem -->
-
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h5>Avaliação de bem</h5>
-                <form action="#" method="post">
-                    <label for="tipo de moeda">Tipo de moeda:</label>
-                    <select name="tipo de moeda" id="tipo de moeda">
-                        <option></option>
-                        <option value="ro">Real</option>
-                        <option value="ac">Dólar</option>
-                        <option value="am">Euro</option>
-                        <option value="rr">Libra</option>
-                        <option value="pa">Iene</option>
-                        <option value="to">Franco Suíço</option>
-                        <option value="ma">Renminbi (Yuan)</option>
-                        <option value="pi">Peso Argentino</option>
-                        <option value="ce">Lira Turca</option>
-                        <option value="rn">Bens</option>
-                        <option value="pb">Outros</option>
-                    </select>
-                    <input type="text" placeholder="Valor de avaliação" required>
-                    <input type="date" required>
-                    <label for="avaliação estimavel">O bem não possui avaliação ou não é possivel estimar o seu
-                        valor?</label>
-                    <input type="radio" name="coleita realizada" value="sim">Sim
-                    <input type="radio" name="coleita realizada" value="nao">Não
-                    </select>
-                </form>
-            </div>
+        <div class="container buttons">
+            <button type="button" class="btn btn-return">Retornar</button>
+            <button type="button" class="btn btn-save">Salvar</button>
         </div>
-    </div>
 
-    <!-- Avaliação de bem -->
+        <!-- Botões -->
 
-    <!-- Dados do Seguro -->
-
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h5>Dados do Seguro</h5>
-                <form action="#" method="post">
-                    <input type="text" inputmode="numeric" placeholder="Número Apólice:" required>
-                    <input type="text" inputmode="numeric" placeholder="CNPJ Seguradora:" required>
-                    <label class="ms-2" for="date">Data Início Val.:
-                        <input type="date" required>
-                    </label>
-                    <label class="ms-2" for="date">Data Fim Val.:
-                        <input type="date" required>
-                    </label>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Dados do Seguro -->
-
-    <!-- Botões -->
-
-    <div class="container buttons">
-        <button type="button" class="btn btn-return">Retornar</button>
-        <button type="button" class="btn btn-save">Salvar</button>
-    </div>
-
-    <!-- Botões -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
