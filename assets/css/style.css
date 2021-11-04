@@ -12,6 +12,7 @@ body, html {
     --gray-dark: #343a40;
     --light: #f8f9fa;
     --danger: #dc3545;
+    --safe: #4cd038;
 }
 
 nav {
@@ -85,6 +86,7 @@ a {
 
 
 input {
+    width: 30%;
     outline: none;
     margin: 10px;
     padding: 5px 5px 0px 5px;
@@ -92,8 +94,16 @@ input {
     border-bottom: 1.7px solid var(--gray);
 }
 
-input::placeholder{
+input::placeholder {
     color: var(--gray-dark);
+}
+
+input:focus:required:invalid{
+    border-bottom: 1.7px solid var(--danger);
+}
+
+input:focus:required:valid{
+    border-bottom: 1.7px solid var(--safe);
 }
 
 .container select {
@@ -102,7 +112,7 @@ input::placeholder{
     border-bottom: 1.7px solid var(--gray);
 }
 
-.container label{
+.container label {
     color: var(--gray-dark);
 }
 
