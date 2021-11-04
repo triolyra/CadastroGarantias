@@ -83,8 +83,8 @@ a {
     color: var(--orange);
 }
 
-
 input {
+    width: 30%;
     outline: none;
     margin: 10px;
     padding: 5px 5px 0px 5px;
@@ -104,6 +104,40 @@ input::placeholder{
 
 .container label{
     color: var(--gray-dark);
+}
+
+.buttons{
+    text-align: end;
+}
+
+.btn{
+    margin: 0px 0px 50px 5px;
+    transition-duration: 0.4s;
+}
+
+.btn:focus{
+    border-color: none;
+    box-shadow: none;
+}
+
+.btn-save{
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.btn-save:hover{
+    background-color:#df6807;
+    color: var(--white);
+}
+
+.btn-return{
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+.btn-return:hover{
+    background-color:#343a40;
+    color: var(--white);
 }
 
 input[type='radio']:after {
@@ -132,31 +166,4 @@ input[type='radio']:checked:after {
     display: inline-block;
     visibility: visible;
     border: 3px solid white;
-}
-
-
-
-.btn:focus{
-    border-color: none;
-    box-shadow: none;
-}
-
-.btn-save{
-    background-color: var(--orange);
-    color: var(--white);
-}
-
-.btn-save:hover{
-    background-color:#df6807;
-    color: var(--white);
-}
-
-.btn-return{
-    background-color: var(--gray);
-    color: var(--white);
-}
-
-.btn-return:hover{
-    background-color:#343a40;
-    color: var(--white);
 }
