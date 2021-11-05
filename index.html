@@ -18,6 +18,11 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
     <title>Portal de Garantias</title>
 </head>
 
@@ -100,6 +105,176 @@
 
     <!-- Tabela/Dados-->
 
+    <!-- Operação -->
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5>Operação</h5>
+                <form action="#" method="post">
+                    <input id="produto" type="text" placeholder="Produto" minlength="5" maxlength="5" required
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    <input id="agencia" type="text" placeholder="Agência" minlength="4" maxlength="5" required
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        title="Insira uma agência válida">
+                    <input id="conta" type="text" placeholder="Conta" minlength="5" maxlength="5" required
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        title="Insira uma conta válida">
+                    <input id="dac" type="text" placeholder="Dac" minlength="1" maxlength="1" required
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        title="Insira um dígito da conta válido">
+                    <input id="cpfcnpj" type="text"
+                        pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
+                        title="Digite um CPF no formato: XXX.XXX.XXX-XX ou CNPJ no formato: XX.XXX.XXX/0001-XX"
+                        maxlength="18" placeholder="CPF/CNPJ do Tomador" required>
+                    <label class="ms-2" for="date">Data de Abertura:
+                        <input type="date" required>
+                    </label>
+                    <label class="ms-2" for="date">Data de Vencimento:
+                        <input type="date" required>
+                        <input type="text" placeholder="Valor" disabled>
+                    </label>
+                    <div class="container buttons">
+                        <button class="mb-0 btn btn-save">Prosseguir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Garantia -->
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h5>Garantia</h5>
+                <form action="#" method="post">
+                    <label for="fiduciaria">Alienação Fiduciária:</label>
+                    <select id="fiduciaria" required>
+                        <option></option>
+                        <option value="1">Caução</option>
+                        <option value="2">Penhor</option>
+                        <option value="3">Alienação Fiduciária</option>
+                        <option value="4">Hipoteca</option>
+                        <option value="5">Carta de Fiança</option>
+                        <option value="6">Aval</option>
+                        <option value="7">Comfort Letter</option>
+                        <option value="8">Devedor Solidário</option>
+                        <option value="9">Conjuge</option>
+                        <option value="10">Cessão Fiduciária</option>
+                        <option value="11">Fundo Garantidor de Aval</option>
+                        <option value="12">Seguro Garantia ou Assemelhado</option>
+                        <option value="13">Seguro e Assemelhado</option>
+                        <option value="14">Bens Arrendados</option>
+                        <option value="15">Penhor + Acordo de Compensação</option>
+                        <option value="16">Strong Comfort Letter</option>
+                        <option value="17">Pledge / Assignment Bahamas</option>
+                        <option value="18">Pledge / Assignment Outra Juri</option>
+                        <option value="19">Vinculação de Contas</option>
+                        <option value="20">Derivativo de Crédito CDS</option>
+                        <option value="21">Resolução 2921</option>
+                        <option value="22">Ativos Vinculados - OFFSHORE</option>
+                        <option value="23">Nota Promissória sem aval</option>
+                        <option value="24">Cessão Fid + Acordo Compens.</option>
+                        <option value="25">Fideicomisso</option>
+                        <option value="26">Prenda</option>
+                        <option value="27">TESTE SCG</option>
+                        <option value="28">Guarantee Letter c/ Benf Ordem</option>
+                        <option value="29">Aval Não Exigida</option>
+                        <option value="30">Cessão Fiduciária -NÃO EXIGIDA</option>
+                        <option value="31">Nota Promissória</option>
+                        <option value="32">Contratual</option>
+                        <option value="33">StandBy Letter of Credit</option>
+                        <option value="34">Termo Vinculação de Receita</option>
+                        <option value="35">Penhor Não Exigida</option>
+                        <option value="36">Hipoteca Não Exigida</option>
+                        <option value="37">Alienação Fiduciária N Exigida</option>
+                        <option value="38">Fiducia</option>
+                        <option value="39">Fiança c/ Benf. Ordem</option>
+                        <option value="40">Trustee</option>
+                    </select>
+                    <label for="bem">Bem Garantia Pessoal:</label>
+                    <select id="bem" required>
+                        <option></option>
+                        <option value="1">Nota Promissória</option>
+                        <option value="2">Duplicatas</option>
+                        <option value="3">Cédulas de Crédito</option>
+                        <option value="4">Letras de Câmbio</option>
+                        <option value="5">Fundos de Investimento</option>
+                        <option value="6">Veículos</option>
+                        <option value="7">Maquinas e Equipamentos</option>
+                        <option value="8">Pecuário</option>
+                        <option value="9">Agrícola</option>
+                        <option value="10">Cartão</option>
+                        <option value="11">Direitos Creditórios</option>
+                        <option value="12">Mercadorias</option>
+                        <option value="13">Imóvel</option>
+                        <option value="14">Cheques</option>
+                        <option value="15">Nota de Crédito</option>
+                        <option value="16">Ações</option>
+                        <option value="17">Cédula de Produto Rural</option>
+                        <option value="18">Certificado Tesouro Nacional</option>
+                        <option value="19">Warrant e Conhecimento Deposit</option>
+                        <option value="20">Debêntures</option>
+                        <option value="21">Compromissada</option>
+                        <option value="22">Sub Empréstimos</option>
+                        <option value="23">Fiança</option>
+                        <option value="24">Fiança Bancária</option>
+                        <option value="25">Guarantee Letter</option>
+                        <option value="26">Standby Letter of Credit</option>
+                        <option value="27">Título Público</option>
+                        <option value="28">Título Privado</option>
+                        <option value="29">Poupança</option>
+                        <option value="30">Seguro Fin./Fdos.Garantidores</option>
+                        <option value="31">Outros Bens</option>
+                        <option value="32">Fundo Garantidor de Aval</option>
+                        <option value="33">Seguro Garantia e Assemelhado</option>
+                        <option value="34">Seguro e Assemelhado</option>
+                        <option value="35">Recibo de Depósito</option>
+                        <option value="36">Cotas de Limitada</option>
+                        <option value="37">Time Deposit</option>
+                        <option value="38">Certificate of Deposit</option>
+                        <option value="39">Bond / Commercial Letter</option>
+                        <option value="40">Letra Financeira</option>
+                        <option value="41">Estoque</option>
+                        <option value="42">Aeronaves</option>
+                        <option value="43">Embarcações</option>
+                        <option value="44">Garantia BM&F</option>
+                        <option value="45">Transferência CCR</option>
+                        <option value="46">Cessão de Crédito</option>
+                        <option value="47">Convênio</option>
+                        <option value="48">CRI</option>
+                        <option value="49">Cessão Definitiva</option>
+                        <option value="50">Cessão sem Trava</option>
+                        <option value="51">Cessão de SWAP</option>
+                        <option value="52">Assignment</option>
+                        <option value="53">Mercantil</option>
+                        <option value="55">Conta</option>
+                        <option value="57">Previdência</option>
+                    </select>
+                    <input type="text" placeholder="% de Cobertura" onkeypress="$(this).mask('000%', {reverse: true}); required">
+                    <input type="text" placeholder="Valor" onkeypress="$(this).mask('R$ 000.000,00', {reverse: true}); required">
+                    <label for="valoracao">Valoração Automática?</label>
+                    <input type="radio" name="valoracao" value="sim" required>Sim
+                    <input type="radio" name="valoracao" value="nao" required>Não
+                    <label for="valoracao" required>Walver?
+                    <input type="radio" name="walver" value="sim" required>Sim
+                    </label>
+                    <input type="radio" name="walver" value="nao">Não
+                    <input type="text" placeholder="Suficiência" disabled>
+                    </select>
+                    <div class="container buttons">
+                        <button class="mb-0 btn btn-save">Prosseguir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Garantia -->
+
+    <!-- Operação -->
+
     <!-- Dados do Penhor Agrícola -->
 
     <div class="container">
@@ -108,7 +283,7 @@
                 <h5 class="ms-0">Dados do Penhor Agrícola</h5>
                 <form action="#" method="post">
                     <label for="Tipo Agrícola">Tipo Agrícola:</label>
-                    <select name="Tipo Agrícola" id="Tipo Agrícola">
+                    <select name="Tipo Agrícola" id="Tipo Agrícola" required>
                         <option></option>
                         <option value="algodão">Algodão</option>
                         <option value="arroz">Arroz</option>
@@ -123,13 +298,15 @@
                         <option value="uva">Uva</option>
                         <option value="figo">Figo</option>
                         <option value="outros">Outros</option>
-                        <input type="text" placeholder="Safra" required>
-                        <input type="text" placeholder="Quantidade" required>
-                        <label for="Colheita realizada">Colheita realizada:</label>
+                        <input type="text" placeholder="Safra" minlength="1" maxlength="10" required
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                        <input type="text" placeholder="Quantidade" minlength="1" maxlength="10" required
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                        <label for="colheita realizada" required>Colheita realizada:</label>
                         <input type="radio" name="coleita realizada" value="sim">Sim
                         <input type="radio" name="coleita realizada" value="nao">Não
                         <label for="Unidade de medida">Unidade de medida:</label>
-                        <select name="Unidade de medida" id="Unidade de medida">
+                        <select name="Unidade de medida" id="Unidade de medida" required>
                             <option></option>
                             <option value="unidade">Unidade</option>
                             <option value="dezena">Dezena</option>
@@ -172,13 +349,18 @@
             <div class="card-body">
                 <h5>Localização da Propriedade</h5>
                 <form action="#" method="post">
-                    <input type="text" placeholder="Nome" required>
-                    <input type="text" placeholder="Endereço" required>
-                    <input type="text" placeholder="Bairro" required>
-                    <input type="text" placeholder="CEP" inputmode="numeric" pattern="[0-9]{5}-[0-9]{3}" required>
-                    <input type="number" inputmode="numeric" placeholder="Número" required>
-                    <input type="text" placeholder="Complemento" required>
-                    <input type="text" placeholder="Cidade" required>
+                    <input id="nome" type="text" placeholder="Nome" minlength="2" maxlength="50"
+                        title="Insira o nome da propriedade" required>
+                    <input id="endereço" type="text" placeholder="Endereço" minlength="5" maxlength="50"
+                        title="Insira o endereço completo com o logradouro" required>
+                    <input id="bairro" type="text" placeholder="Bairro" required minlength="5" maxlength="30">
+                    <input id="cep" type="text" placeholder="CEP" minlength="8" onkeypress="$(this).mask('00000-000')"
+                        required>
+                    <input id="num" type="text" minlength="1" maxlength="5" placeholder="Número"
+                        title="Insira o número da propriedade"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                    <input type="text" placeholder="Complemento">
+                    <input type="text" placeholder="Cidade" minlength="2" required>
                     <label for="uf">UF:</label>
                     <select name="uf" id="uf">
                         <option></option>
@@ -223,7 +405,7 @@
                 <h5>Avaliação de bem</h5>
                 <form action="#" method="post">
                     <label for="tipo de moeda">Tipo de moeda:</label>
-                    <select name="tipo de moeda" id="tipo de moeda">
+                    <select name="tipo de moeda" id="tipo de moeda" required>
                         <option></option>
                         <option value="ro">Real</option>
                         <option value="ac">Dólar</option>
@@ -231,8 +413,11 @@
                         <option value="rr">Libra</option>
                         <option value="pb">Outros</option>
                     </select>
-                    <input type="text" placeholder="Valor de avaliação" required>
-                    <input type="date" required>
+                    <input id="valor" type="text" placeholder="Valor de avaliação"
+                        onkeypress="$(this).mask('R$999.990,00')" required>
+                    <label class="ms-2" for="date">Data da Avaliação:
+                        <input type="date" required>
+                    </label>
                     <label for="avaliação estimavel">O bem não possui avaliação ou não é possivel estimar o seu
                         valor?</label>
                     <input type="radio" name="coleita realizada" value="sim">Sim
@@ -252,8 +437,10 @@
             <div class="card-body">
                 <h5>Dados do Seguro</h5>
                 <form action="#" method="post">
-                    <input type="text" inputmode="numeric" placeholder="Número Apólice:" required>
-                    <input type="text" inputmode="numeric" placeholder="CNPJ Seguradora:" required>
+                    <input type="text" placeholder="Número Apólice:" minlength="5" maxlength="30" required
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" title="Insira um número válido"
+                        required>
+                    <input type="text" placeholder="CNPJ Seguradora:" onkeypress="$(this).mask('00.000.000/0000-00')" required>
                     <label class="ms-2" for="date">Data Início Val.:
                         <input type="date" required>
                     </label>
