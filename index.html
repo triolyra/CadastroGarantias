@@ -150,7 +150,7 @@
                 <h5>Garantia</h5>
                 <form action="#" method="post">
                     <label for="fiduciaria">Alienação Fiduciária:</label>
-                    <select id="fiduciaria">
+                    <select id="fiduciaria" required>
                         <option></option>
                         <option value="1">Caução</option>
                         <option value="2">Penhor</option>
@@ -194,7 +194,7 @@
                         <option value="40">Trustee</option>
                     </select>
                     <label for="bem">Bem Garantia Pessoal:</label>
-                    <select id="bem">
+                    <select id="bem" required>
                         <option></option>
                         <option value="1">Nota Promissória</option>
                         <option value="2">Duplicatas</option>
@@ -252,17 +252,20 @@
                         <option value="55">Conta</option>
                         <option value="57">Previdência</option>
                     </select>
-                    <input type="text" placeholder="% de Cobertura" required>
-                    <input type="text" placeholder="Valor" required>
+                    <input type="text" placeholder="% de Cobertura" onkeypress="$(this).mask('000%', {reverse: true}); required">
+                    <input type="text" placeholder="Valor" onkeypress="$(this).mask('R$ 000.000,00', {reverse: true}); required">
                     <label for="valoracao">Valoração Automática?</label>
-                    <input type="radio" name="valoracao" value="sim">Sim
-                    <input type="radio" name="valoracao" value="nao">Não
-                    <label for="valoracao">Walver?
-                        <input type="radio" name="walver" value="sim">Sim
+                    <input type="radio" name="valoracao" value="sim" required>Sim
+                    <input type="radio" name="valoracao" value="nao" required>Não
+                    <label for="valoracao" required>Walver?
+                    <input type="radio" name="walver" value="sim" required>Sim
                     </label>
                     <input type="radio" name="walver" value="nao">Não
-                    <input type="text" placeholder="Suficiência" required>
+                    <input type="text" placeholder="Suficiência" disabled>
                     </select>
+                    <div class="container buttons">
+                        <button class="mb-0 btn btn-save">Prosseguir</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -409,12 +412,6 @@
                         <option value="ac">Dólar</option>
                         <option value="am">Euro</option>
                         <option value="rr">Libra</option>
-                        <option value="pa">Iene</option>
-                        <option value="to">Franco Suíço</option>
-                        <option value="ma">Renminbi (Yuan)</option>
-                        <option value="pi">Peso Argentino</option>
-                        <option value="ce">Lira Turca</option>
-                        <option value="rn">Bens</option>
                         <option value="pb">Outros</option>
                     </select>
                     <input id="valor" type="text" placeholder="Valor de avaliação"
