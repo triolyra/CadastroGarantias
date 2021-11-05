@@ -18,6 +18,11 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
     <title>Portal de Garantias</title>
 </head>
 
@@ -110,22 +115,25 @@
                     <input id="produto" type="text" placeholder="Produto" minlength="5" maxlength="5" required
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                     <input id="agencia" type="text" placeholder="Agência" minlength="4" maxlength="5" required
-                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" title="Insira uma agência válida">
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        title="Insira uma agência válida">
                     <input id="conta" type="text" placeholder="Conta" minlength="5" maxlength="5" required
-                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" title="Insira uma conta válida">
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        title="Insira uma conta válida">
                     <input id="dac" type="text" placeholder="Dac" minlength="1" maxlength="1" required
-                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" title= "Insira um dígito da conta válido">
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                        title="Insira um dígito da conta válido">
                     <input id="cpfcnpj" type="text"
                         pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
-                        title="Digite um CPF no formato: XXX.XXX.XXX-XX ou CNPJ no formato: XX.XXX.XXX/0001-XX" maxlength="18" 
-                        placeholder="CPF/CNPJ do Tomador" required>
+                        title="Digite um CPF no formato: XXX.XXX.XXX-XX ou CNPJ no formato: XX.XXX.XXX/0001-XX"
+                        maxlength="18" placeholder="CPF/CNPJ do Tomador" required>
                     <label class="ms-2" for="date">Data de Abertura:
-                            <input type="date" required>
-                        </label>
-                        <label class="ms-2" for="date">Data de Vencimento:
-                            <input type="date" required>
-                            <input type="number" inputmode="numeric" placeholder="Valor" disabled>
-                        </label>
+                        <input type="date" required>
+                    </label>
+                    <label class="ms-2" for="date">Data de Vencimento:
+                        <input type="date" required>
+                        <input type="text" placeholder="Valor" disabled>
+                    </label>
                     <div class="container buttons">
                         <button class="mb-0 btn btn-save">Prosseguir</button>
                     </div>
@@ -134,9 +142,9 @@
         </div>
     </div>
 
- <!-- Garantia -->
+    <!-- Garantia -->
 
-<div class="container">
+    <div class="container">
         <div class="card">
             <div class="card-body">
                 <h5>Garantia</h5>
@@ -272,7 +280,7 @@
                 <h5 class="ms-0">Dados do Penhor Agrícola</h5>
                 <form action="#" method="post">
                     <label for="Tipo Agrícola">Tipo Agrícola:</label>
-                    <select name="Tipo Agrícola" id="Tipo Agrícola">
+                    <select name="Tipo Agrícola" id="Tipo Agrícola" required>
                         <option></option>
                         <option value="algodão">Algodão</option>
                         <option value="arroz">Arroz</option>
@@ -287,13 +295,15 @@
                         <option value="uva">Uva</option>
                         <option value="figo">Figo</option>
                         <option value="outros">Outros</option>
-                        <input type="text" placeholder="Safra" required>
-                        <input type="text" placeholder="Quantidade" required>
-                        <label for="Colheita realizada">Colheita realizada:</label>
+                        <input type="text" placeholder="Safra" minlength="1" maxlength="10" required
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                        <input type="text" placeholder="Quantidade" minlength="1" maxlength="10" required
+                            onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                        <label for="colheita realizada" required>Colheita realizada:</label>
                         <input type="radio" name="coleita realizada" value="sim">Sim
                         <input type="radio" name="coleita realizada" value="nao">Não
                         <label for="Unidade de medida">Unidade de medida:</label>
-                        <select name="Unidade de medida" id="Unidade de medida">
+                        <select name="Unidade de medida" id="Unidade de medida" required>
                             <option></option>
                             <option value="unidade">Unidade</option>
                             <option value="dezena">Dezena</option>
@@ -336,13 +346,18 @@
             <div class="card-body">
                 <h5>Localização da Propriedade</h5>
                 <form action="#" method="post">
-                    <input type="text" placeholder="Nome" required>
-                    <input type="text" placeholder="Endereço" required>
-                    <input type="text" placeholder="Bairro" required>
-                    <input type="text" placeholder="CEP" inputmode="numeric" pattern="[0-9]{5}-[0-9]{3}" required>
-                    <input type="number" inputmode="numeric" placeholder="Número" required>
-                    <input type="text" placeholder="Complemento" required>
-                    <input type="text" placeholder="Cidade" required>
+                    <input id="nome" type="text" placeholder="Nome" minlength="2" maxlength="50"
+                        title="Insira o nome da propriedade" required>
+                    <input id="endereço" type="text" placeholder="Endereço" minlength="5" maxlength="50"
+                        title="Insira o endereço completo com o logradouro" required>
+                    <input id="bairro" type="text" placeholder="Bairro" required minlength="5" maxlength="30">
+                    <input id="cep" type="text" placeholder="CEP" minlength="8" onkeypress="$(this).mask('00000-000')"
+                        required>
+                    <input id="num" type="text" minlength="1" maxlength="5" placeholder="Número"
+                        title="Insira o número da propriedade"
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+                    <input type="text" placeholder="Complemento">
+                    <input type="text" placeholder="Cidade" minlength="2" required>
                     <label for="uf">UF:</label>
                     <select name="uf" id="uf">
                         <option></option>
@@ -387,7 +402,7 @@
                 <h5>Avaliação de bem</h5>
                 <form action="#" method="post">
                     <label for="tipo de moeda">Tipo de moeda:</label>
-                    <select name="tipo de moeda" id="tipo de moeda">
+                    <select name="tipo de moeda" id="tipo de moeda" required>
                         <option></option>
                         Dólar Americano
                         <option value="ro">Real</option>
@@ -402,8 +417,11 @@
                         <option value="rn">Bens</option>
                         <option value="pb">Outros</option>
                     </select>
-                    <input type="text" placeholder="Valor de avaliação" required>
-                    <input type="date" required>
+                    <input id="valor" type="text" placeholder="Valor de avaliação"
+                        onkeypress="$(this).mask('R$999.990,00')" required>
+                    <label class="ms-2" for="date">Data da Avaliação:
+                        <input type="date" required>
+                    </label>
                     <label for="avaliação estimavel">O bem não possui avaliação ou não é possivel estimar o seu
                         valor?</label>
                     <input type="radio" name="coleita realizada" value="sim">Sim
@@ -423,8 +441,10 @@
             <div class="card-body">
                 <h5>Dados do Seguro</h5>
                 <form action="#" method="post">
-                    <input type="number" inputmode="numeric" placeholder="Número Apólice:" required>
-                    <input type="number" inputmode="numeric" placeholder="CNPJ Seguradora:" required>
+                    <input type="text" placeholder="Número Apólice:" minlength="5" maxlength="30" required
+                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" title="Insira um número válido"
+                        required>
+                    <input type="text" placeholder="CNPJ Seguradora:" onkeypress="$(this).mask('00.000.000/0000-00')" required>
                     <label class="ms-2" for="date">Data Início Val.:
                         <input type="date" required>
                     </label>
