@@ -24,6 +24,9 @@ a {
     color: var(--white);
 }
 
+.bold {
+    font-weight: bold;
+}
 .portal {
     font-size: 25px;
     color: var(--white);

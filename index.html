@@ -62,49 +62,6 @@
 
     <!-- Menu -->
 
-    <!-- inclusão Do Penhor -->
-    <div>
-        <div class="container">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row pb-0 d-flex justify-content-start">
-                        <h5> Inclusão do Penhor Agrícola</h5>
-                    </div>
-
-                    <!-- inclusão Do Penhor -->
-
-                    <!-- Tabela/Dados-->
-
-                    <table class="table mt-3">
-                        <tbody>
-                            <div class="row d-flex justify-content-lg-start">
-                                <div class="col-3">
-                                    <tr>
-                                        <th scope="row">Produto</th>
-                                        <td>12345678889</td>
-                                        <th scope="row">Cliente</th>
-                                        <td>None</td>
-                                    </tr>
-                                </div>
-                                <div class="col-3 ">
-                                    <tr>
-                                        <th scope="row">Contrato</th>
-                                        <td>12345</td>
-                                        <th scope="row">CNPJ</th>
-                                        <td>23456789090</td>
-                                    </tr>
-                                </div>
-                            </div>
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Tabela/Dados-->
-
     <!-- Operação -->
 
     <div class="container">
@@ -112,8 +69,8 @@
             <div class="card-body">
                 <h5>Operação</h5>
                 <form action="#" method="post">
-                    <input id="produto" type="text" placeholder="Produto" minlength="5" maxlength="5" required
-                        onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                    <input id="produto" name="exemplo1" type="text" placeholder="Produto" minlength="5" maxlength="5"
+                        required onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                     <input id="agencia" type="text" placeholder="Agência" minlength="4" maxlength="5" required
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                         title="Insira uma agência válida">
@@ -123,7 +80,7 @@
                     <input id="dac" type="text" placeholder="Dac" minlength="1" maxlength="1" required
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                         title="Insira um dígito da conta válido">
-                    <input id="cpfcnpj" type="text"
+                    <input id="cpfcnpj" type="text" name="exemplo2"
                         pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})|(\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})"
                         title="Digite um CPF no formato: XXX.XXX.XXX-XX ou CNPJ no formato: XX.XXX.XXX/0001-XX"
                         maxlength="18" placeholder="CPF/CNPJ do Tomador" required>
@@ -141,6 +98,7 @@
             </div>
         </div>
     </div>
+    <!-- Operação -->
 
     <!-- Garantia -->
 
@@ -252,13 +210,15 @@
                         <option value="55">Conta</option>
                         <option value="57">Previdência</option>
                     </select>
-                    <input type="text" placeholder="% de Cobertura" onkeypress="$(this).mask('000%', {reverse: true}); required">
-                    <input type="text" placeholder="Valor" onkeypress="$(this).mask('R$ 000.000,00', {reverse: true}); required">
+                    <input type="text" placeholder="% de Cobertura"
+                        onkeypress="$(this).mask('000%', {reverse: true}); required">
+                    <input type="text" placeholder="Valor"
+                        onkeypress="$(this).mask('R$ 000.000,00', {reverse: true}); required">
                     <label for="valoracao">Valoração Automática?</label>
                     <input type="radio" name="valoracao" value="sim" required>Sim
                     <input type="radio" name="valoracao" value="nao" required>Não
                     <label for="valoracao" required>Walver?
-                    <input type="radio" name="walver" value="sim" required>Sim
+                        <input type="radio" name="walver" value="sim" required>Sim
                     </label>
                     <input type="radio" name="walver" value="nao">Não
                     <input type="text" placeholder="Suficiência" disabled>
@@ -273,7 +233,51 @@
 
     <!-- Garantia -->
 
-    <!-- Operação -->
+
+    <!-- inclusão Do Penhor -->
+    <!-- inclusão Do Penhor -->
+    <div>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row pb-0 d-flex justify-content-start">
+                        <h5> Inclusão do Penhor Agrícola</h5>
+                    </div>
+
+                    <!-- inclusão Do Penhor -->
+
+                    <!-- Tabela/Dados-->
+
+                    <table class="table mt-3">
+                        <tbody>
+                            <div class="row d-flex justify-content-lg-start">
+                                <div class="col-3">
+                                    <tr>
+                                        <th scope="row">Produto</th>
+                                        <td>12345678889</td>
+                                        <th scope="row">Cliente</th>
+                                        <td>None</td>
+                                    </tr>
+                                </div>
+                                <div class="col-3 ">
+                                    <tr>
+                                        <th scope="row">Contrato</th>
+                                        <td>12345</td>
+                                        <th scope="row">CNPJ</th>
+                                        <td>23456789090</td>
+                                    </tr>
+                                </div>
+                            </div>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tabela/Dados-->
+    <!-- inclusão Do Penhor -->
+
 
     <!-- Dados do Penhor Agrícola -->
 
@@ -418,10 +422,11 @@
                     <label class="ms-2" for="date">Data da Avaliação:
                         <input type="date" required>
                     </label>
-                    <label for="avaliação estimavel">O bem não possui avaliação ou não é possivel estimar o seu
+                    <label for="avaliação estimavel">O bem não possui avaliação ou não é possivel
+                        estimar o seu
                         valor?</label>
-                    <input type="radio" name="coleita realizada" value="sim">Sim
-                    <input type="radio" name="coleita realizada" value="nao">Não
+                    <input type="radio" name="colheita realizada" value="sim">Sim
+                    <input type="radio" name="colheita realizada" value="nao">Não
                     </select>
                 </form>
             </div>
@@ -440,7 +445,8 @@
                     <input type="text" placeholder="Número Apólice:" minlength="5" maxlength="30" required
                         onkeypress="return event.charCode >= 48 && event.charCode <= 57" title="Insira um número válido"
                         required>
-                    <input type="text" placeholder="CNPJ Seguradora:" onkeypress="$(this).mask('00.000.000/0000-00')" required>
+                    <input type="text" placeholder="CNPJ Seguradora:" onkeypress="$(this).mask('00.000.000/0000-00')"
+                        required>
                     <label class="ms-2" for="date">Data Início Val.:
                         <input type="date" required>
                     </label>
